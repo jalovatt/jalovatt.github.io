@@ -1,0 +1,23 @@
+@font-face {
+	font-family: 'Computer Modern Typewriter';
+	src: url('cmuntt.eot');
+	src: url('cmuntt.eot?#iefix') format('embedded-opentype'),
+		 url('cmuntt.woff') format('woff'),
+		 url('cmuntt.ttf') format('truetype'),
+		 url('cmuntt.svg#cmuntt') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Computer Modern Typewriter';
+	src: url('cmuntb.eot');
+	src: url('cmuntb.eot?#iefix') format('embedded-opentype'),
+		 url('cmuntb.woff') format('woff'),
+		 url('cmuntb.ttf') format('truetype'),
+		 url('cmuntb.svg#cmuntb') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
