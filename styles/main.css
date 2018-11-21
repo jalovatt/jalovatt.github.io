@@ -31,7 +31,11 @@ html {
 
   font-size: var(--font-size);
   font-family: var(--font);
-  white-space: pre;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+  over
 
 }
 
