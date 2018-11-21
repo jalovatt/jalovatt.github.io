@@ -5,8 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>J. Adam Lovatt</title>
-  <link rel="stylesheet" type="text/css" href="assets/typewriter/cmun-typewriter.css">
-  <link rel="stylesheet" type="text/css" href="assets/typewriter-light/cmun-typewriter-light.css">
   <style>
 
     html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
@@ -21,28 +19,29 @@
 
     html {
 
-      --text-regular: 'Computer Modern Typewriter Light', "DejaVu Sans Mono", "Andale Mono", Monaco, Courier, monospace;
-      --text-bold:    'Computer Modern Typewriter', "DejaVu Sans Mono", "Andale Mono", Monaco, Courier, monospace;
+      --font: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
 
-      --font-size: 1.2rem;
-      --font-size-2: calc(2*var(--font-size));
+      --font-size: 1.1rem;
+      --font-size-double: calc(2*var(--font-size));
+      --font-size-half: calc(0.5*var(--font-size));
       --font-size-minus: calc(-1*var(--font-size));
-      --font-size-minus-2: calc(-2*var(--font-size));
+      --font-size-minus-double: calc(-2*var(--font-size));
+      --font-size-minus-half: calc(-0.5*var(--font-size));
 
-      --header-offset: calc(15.5 * var(--font-size));
+      --header-offset: calc(14 * var(--font-size));
       --header-offset-minus: calc(-1*var(--header-offset));
 
       --text-color: #FDFDFD;
-      --bg-color: #212121;
+      --bg-color: #151515;
 
       color: var(--text-color);
       background-color: var(--bg-color);
 
       font-size: var(--font-size);
-      font-family: var(--text-regular);
+      font-family: var(--font);
       white-space: pre;
 
-      line-height: 95%;
+      line-height: 98%;
 
     }
 
@@ -70,9 +69,9 @@
       background-color: var(--bg-color);
       box-shadow:
         0px
+        var(--font-size-half)
         var(--font-size)
-        var(--font-size-2)
-        4px
+        var(--font-size-half)
         var(--bg-color);
 
     }
@@ -92,7 +91,7 @@
       box-shadow:
         0px
         var(--font-size-minus)
-        var(--font-size-2)
+        var(--font-size-double)
         4px
         var(--bg-color);
 
@@ -115,7 +114,8 @@
     }
 
     a:hover{
-      color: inherit;
+      color: var(--bg-color);
+      background-color: var(--text-color);
     }
 
     .anchor-no-decoration {
@@ -137,12 +137,12 @@ adam(1)                        Linux User's Manual                       adam(1)
     j. adam lovatt
 
 <em>SYNOPSIS</em>
-    <em>adam</em>  [<em><a class="anchor-no-decoration" href="#--developer">--developer</a></em>] [<em><a class="anchor-no-decoration" href="#--designer">--designer</a></em>] [<em><a class="anchor-no-decoration" href="#--contributor">--contributor</a></em>] [<em><a class="anchor-no-decoration" href="#--educator">--educator</a></em>]
-          [<em><a class="anchor-no-decoration" href="#--leader">--leader</a></em>] [<em><a class="anchor-no-decoration" href="#--guitarist">--guitarist</a></em>] [<em><a class="anchor-no-decoration" href="#--music-lover">--music-lover</a></em>] [<em><a class="anchor-no-decoration" href="#--dog-lover">--dog-lover</a></em>]
-          [<em><a class="anchor-no-decoration" href="#--shameless-geek">--shameless-geek</a></em>]
+    <em>adam</em>  <em><a class="anchor-no-decoration" href="#--developer">[--developer]</a></em> <em><a class="anchor-no-decoration" href="#--designer">[--designer]</a></em> <em><a class="anchor-no-decoration" href="#--contributor">[--contributor]</a></em> <em><a class="anchor-no-decoration" href="#--educator">[--educator]</a></em>
+          <em><a class="anchor-no-decoration" href="#--leader">[--leader]</a></em> <em><a class="anchor-no-decoration" href="#--guitarist">[--guitarist]</a></em> <em><a class="anchor-no-decoration" href="#--music-lover">[--music-lover]</a></em> <em><a class="anchor-no-decoration" href="#--dog-lover">[--dog-lover]</a></em>
+          <em><a class="anchor-no-decoration" href="#--shameless-geek">[--shameless-geek]</a></em>
 
-                      <a class="anchor-no-decoration" href="#summary"><em>[SUMMARY]</em></a>    <a class="anchor-no-decoration" href="#options"><em>[OPTIONS]</em></a>    <a class="anchor-no-decoration" href="#history"><em>[HISTORY]</em></a>        </header>
-<main><em class="offset-anchor" id="summary">SUMMARY</em>
+                  <a class="anchor-no-decoration" href="#DESCRIPTION"><em>[DESCRIPTION]</em></a>    <a class="anchor-no-decoration" href="#options"><em>[OPTIONS]</em></a>    <a class="anchor-no-decoration" href="#history"><em>[HISTORY]</em></a>        </header>
+<main><em class="offset-anchor" id="DESCRIPTION">DESCRIPTION</em>
     <em>adam</em> is a full-stack developer that can be easily adapted to work with a
     variety of languages and technologies. He can be used as a powerful text
     editor, but his skills are particularly useful for designing attractive and
@@ -186,83 +186,87 @@ adam(1)                        Linux User's Manual                       adam(1)
     In short, installing <em>adam</em> will make both him and your team better.
 
 <em class="offset-anchor" id="options">OPTIONS</em>
-    <em id="--developer">--developer</em>
-        Attended the Lighthouse Labs Web Development Bootcamp, where he gained
+    <em class="offset-anchor" id="--developer">--developer</em>
+        Attended the <a href="https://www.lighthouselabs.ca/web-bootcamp">Lighthouse Labs Web Development Bootcamp</a>, where he gained
         experience designing and building web applications using:
-            * Javascript
-            * HTML
-            * CSS
+
+            * Javascript            * Express.js
+            * HTML                  * MongoDB
+            * CSS                   * PostgreSQL
             * Node.js
-            * Express
-            * MongoDB
-            * PostgreSQL
 
         Some of <em>adam</em>'s web projects include:
-            * Sextant: A user-driven library of useful websites for the topics
-              covered in the Lighthouse Labs bootcamp, designed to fit in
-              seamlessly with LHL's Compass learning platform
-            * Grogger
+
+            * <a href="http://sextant-lhl.herokuapp.com/">Sextant</a>: A user-driven library of useful websites for topics
+              covered in the bootcamp, designed to fit in seamlessly with LHL's
+              Compass learning platform. <em>adam</em> was responsible for the PostgreSQL
+              database and adapting his team's markup to use the learning
+              platform's stylesheets.
+
+            * <a href="http://grogger.herokuapp.com/">Grogger</a>: A basic Twitter-style single page app using JQuery to
+              communicate with a back-end API.
 
 
-    <em id="--designer">--designer</em>
-        Designed, built, and continues to maintain Lokasenna GUI, a user
-        interface framework for the REAPER digital audio workstation that gives
+    <em class="offset-anchor" id="--designer">--designer</em>
+        Designed, built, and continues to maintain <a href="https://github.com/jalovatt/Lokasenna_GUI/wiki">Lokasenna GUI</a>, a user
+        interface framework for the <a href="https://www.reaper.fm/">REAPER</a> digital audio workstation that gives
         scripters an easy-to-use set of interface elements, handles drawing and
         updates, and takes care of end-user event handling.
 
-    <em id="--contributor">--contributor</em>
+    <em class="offset-anchor" id="--contributor">--contributor</em>
         <em>adam</em> has created dozens of scripts and tools for the REAPER community,
         some of which have been used by established music, sound design, and
         game development studios.
 
         Notable REAPER projects:
-            * Lokasenna GUI
-            * Radial Menu: Fast, expandable toolbar replacement offering a
-              staggering amount of customizability for different workflows
-            * Theory Helper: Suite of tools that assist users in matching
+
+            * <a href="https://github.com/jalovatt/Lokasenna_GUI/wiki">Lokasenna GUI</a>
+
+            * <a href="https://forum.cockos.com/showthread.php?t=186637">Radial Menu</a>: A fast, expandable toolbar replacement offering a
+              staggering amount of customizability for different workflows.
+
+            * <a href="https://forum.cockos.com/showthread.php?t=185358">Theory Helper</a>: Suite of tools that assist users in matching
               musical notes to a scale, generating chords, and creating
-              harmonies
+              harmonies.
 
-
-    <em id="--educator">--educator</em>
+    <em class="offset-anchor" id="--educator">--educator</em>
         Some applications experience segmentation faults at the thought of
         having to explain something, but not <em>adam</em>. He genuinely enjoys teaching
         others what he knows, and has frequently been known to answer simple
         questions of syntax or usage with short essays covering a variety of use
         cases, pros, cons, and pitfalls.
 
-    <em id="--leader">--leader</em>
+    <em class="offset-anchor" id="--leader">--leader</em>
         Comes pre-configured with a number of team- and project-management
-        tools. He has succesfully led teams of up to 20 workers in completion
-        of long-term (6+ months) projects with a minimal amount of coupling to
-        and dependence on supervisory-level colleagues.
+        tools. He has effectively headed teams of up to 20 workers in the
+        completion of long-term (6+ months) projects with a minimal amount of
+        dependence on supervisors.
 
-            * Planned and oversaw electrical installation for the Connections
-              Center of the Calgary airport's International terminal
-            * Planned and oversaw electrical installation of the building
-              management system on two floors of Calgary's South Health Campus
+            * International Terminal, Calgary International Airport
+            * South Health Campus, Calgary
 
-    <em id="--guitarist">--guitarist</em>
-    <em id="--music-lover">--music-lover</em>
-        <em>adam</em> is a rabid fan of music, covering a wide range from classical to
-        jazz to folk to death metal, though he will happily admit to being
+    <em class="offset-anchor" id="--guitarist">--guitarist</em>, <em class="offset-anchor" id="--music-lover">--music-lover</em>
+        <em>adam</em> is lives and breathes music, covering a wide range from classical
+        to jazz to folk to death metal, though he will happily admit to being
         particularly fond of anything associated with the 1980s. He is a capable
         guitarist and amateur mixing engineer, and laments not having the living
-        space in which to build amplifiers or instruments.
+        space in which to build his own instruments and amplifiers.
 
-    <em id="--dog-lover">--dog-lover</em>
+    <em class="offset-anchor" id="--dog-lover">--dog-lover</em>
         Comes pre-configured with one or more Boston Terriers, because Boston
         Terriers are one of mankind's greatest achievements.
 
-    <em id="--shameless-geek">--shameless-geek</em>
+    <em class="offset-anchor" id="--shameless-geek">--shameless-geek</em>
         <em>adam</em> is a voracious consumer of science fiction, fantasy, and horror.
         He particularly enjoys the work of Douglas Adams, H.P. Lovecraft, John
         Carpenter, and Tim Burton, loves Star Trek, and considers The Expanse
         to be one of the best television shows in recent years.
 
-        He also finds physics endlessly fascinating, is easily diverted for
-        hours at a time chasing strange topics down Wikipedian rabbit holes, and
-        would happily pay large sums of money in order to visit a lava lake.
+        <em>adam</em> is easily diverted for hours at a time chasing obscure
+        topics down Wikipedian rabbit holes.
+
+        <em>adam</em> would happily pay a large sum of money in order to visit
+        a lava lake up close.
 
 <em class="offset-anchor" id="history">HISTORY</em>
 
