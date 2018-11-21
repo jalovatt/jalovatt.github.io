@@ -4,144 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="styles/main.css">
   <title>J. Adam Lovatt</title>
-  <style>
-
-    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      outline: 0;
-      font-size: 100%;
-      vertical-align: baseline;
-      background: transparent;
-    }
-
-    html {
-
-      --font: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
-
-      --font-size: 1.1rem;
-      --font-size-double: calc(2*var(--font-size));
-      --font-size-half: calc(0.5*var(--font-size));
-      --font-size-minus: calc(-1*var(--font-size));
-      --font-size-minus-double: calc(-2*var(--font-size));
-      --font-size-minus-half: calc(-0.5*var(--font-size));
-
-      --header-offset: calc(14 * var(--font-size));
-      --header-offset-minus: calc(-1*var(--header-offset));
-
-      --text-color: #FDFDFD;
-      --bg-color: #151515;
-
-      color: var(--text-color);
-      background-color: var(--bg-color);
-
-      font-size: var(--font-size);
-      font-family: var(--font);
-      white-space: pre;
-
-      line-height: 98%;
-
-    }
-
-    body {
-      /* height: 100%; */
-      width: 80ch;
-
-      margin-top: var(--font-size-minus);
-      margin-bottom: var(--font-size-minus);
-      margin-left: auto;
-      margin-right: auto;
-
-    }
-
-    header {
-
-      position: sticky;
-      top: 0px;
-
-      margin-top: var(--font-size-minus);
-      padding-bottom: var(--font-size);
-
-      border-bottom: 1px solid var(--text-color);
-
-      background-color: var(--bg-color);
-      box-shadow:
-        0px
-        var(--font-size-half)
-        var(--font-size)
-        var(--font-size-half)
-        var(--bg-color);
-
-    }
-
-    footer {
-
-      position: sticky;
-      bottom: 0px;
-
-      margin-bottom: var(--font-size-minus);
-      padding-top: var(--font-size);
-
-      border-top: 1px solid var(--text-color);
-
-      background-color: var(--bg-color);
-
-      box-shadow:
-        0px
-        var(--font-size-minus)
-        var(--font-size-double)
-        4px
-        var(--bg-color);
-
-    }
-
-    main {
-      /* margin-top: var(--font-size-minus); */
-      padding-top: var(--font-size);
-      padding-bottom: var(--font-size);
-    }
-
-    em {
-      font-weight: bold;
-      font-family: var(--text-bold);
-      font-style: normal;
-    }
-
-    a, a:active, a:visited {
-      color: inherit;
-    }
-
-    a:hover{
-      color: var(--bg-color);
-      background-color: var(--text-color);
-    }
-
-    .anchor-no-decoration {
-      text-decoration: none;
-    }
-
-    .offset-anchor:target {
-
-      padding-top: var(--header-offset);
-
-    }
-  </style>
 </head>
-<body>
-<header>
-adam(1)                        Linux User's Manual                       adam(1)
+<body><header>
+adam(1)                           User's Manual                          adam(1)
 
 <em>NAME</em>
-    j. adam lovatt
+    J. Adam Lovatt
 
 <em>SYNOPSIS</em>
-    <em>adam</em>  <em><a class="anchor-no-decoration" href="#--developer">[--developer]</a></em> <em><a class="anchor-no-decoration" href="#--designer">[--designer]</a></em> <em><a class="anchor-no-decoration" href="#--contributor">[--contributor]</a></em> <em><a class="anchor-no-decoration" href="#--educator">[--educator]</a></em>
-          <em><a class="anchor-no-decoration" href="#--leader">[--leader]</a></em> <em><a class="anchor-no-decoration" href="#--guitarist">[--guitarist]</a></em> <em><a class="anchor-no-decoration" href="#--music-lover">[--music-lover]</a></em> <em><a class="anchor-no-decoration" href="#--dog-lover">[--dog-lover]</a></em>
-          <em><a class="anchor-no-decoration" href="#--shameless-geek">[--shameless-geek]</a></em>
+    <em>adam</em>  <em><a class="anchor-no-decoration" href="#--developer">[--developer]</a></em> <em><a class="anchor-no-decoration" href="#--designer">[--designer]</a></em> <em><a class="anchor-no-decoration" href="#--contributor">[--contributor]</a></em> <em><a class="anchor-no-decoration" href="#--educator">[--educator]</a></em> <em><a class="anchor-no-decoration" href="#--leader">[--leader]</a></em>
+          <em><a class="anchor-no-decoration" href="#--guitarist">[--guitarist]</a></em> <em><a class="anchor-no-decoration" href="#--music-lover">[--music-lover]</a></em> <em><a class="anchor-no-decoration" href="#--dog-lover">[--dog-lover]</a></em> <em><a class="anchor-no-decoration" href="#--shameless-geek">[--shameless-geek]</a></em>
 
-                  <a class="anchor-no-decoration" href="#DESCRIPTION"><em>[DESCRIPTION]</em></a>    <a class="anchor-no-decoration" href="#options"><em>[OPTIONS]</em></a>    <a class="anchor-no-decoration" href="#history"><em>[HISTORY]</em></a>        </header>
+                <a class="anchor-no-decoration" href="#DESCRIPTION"><em>[DESCRIPTION]</em></a>  <a class="anchor-no-decoration" href="#options"><em>[OPTIONS]</em></a>  <a class="anchor-no-decoration" href="#history"><em>[HISTORY]</em></a>  <a class="anchor-no-decoration" href="#contact"><em>[CONTACT]</em></a>       </header>
 <main><em class="offset-anchor" id="DESCRIPTION">DESCRIPTION</em>
     <em>adam</em> is a full-stack developer that can be easily adapted to work with a
     variety of languages and technologies. He can be used as a powerful text
@@ -150,10 +26,10 @@ adam(1)                        Linux User's Manual                       adam(1)
     of workers and improve project efficiency while reducing the amount of
     oversight necessary.
 
-    Though <em>adam</em> was intended for use in computer programming, a series of false
-    starts found his skill set being used and refined in fields as diverse as
-    retail, the liquor industry, and most recently the commercial and industrial
-    sectors as an electrician.
+    Though originally developed for use in computer programming, a series of
+    false starts found his skill set being used and refined in fields as diverse
+    as retail, the liquor industry, and most recently the commercial and
+    industrial sectors as an electrician.
 
     <em>adam</em> has been designed from the ground up to be easily expanded with new
     tools and skills. He incorporates cutting-edge machine learning technology,
@@ -187,7 +63,7 @@ adam(1)                        Linux User's Manual                       adam(1)
 
 <em class="offset-anchor" id="options">OPTIONS</em>
     <em class="offset-anchor" id="--developer">--developer</em>
-        Attended the <a href="https://www.lighthouselabs.ca/web-bootcamp">Lighthouse Labs Web Development Bootcamp</a>, where he gained
+        Attended the <a target="_blank" href="https://www.lighthouselabs.ca/web-bootcamp">Lighthouse Labs Web Development Bootcamp</a>, where he gained
         experience designing and building web applications using:
 
             * Javascript            * Express.js
@@ -197,19 +73,19 @@ adam(1)                        Linux User's Manual                       adam(1)
 
         Some of <em>adam</em>'s web projects include:
 
-            * <a href="http://sextant-lhl.herokuapp.com/">Sextant</a>: A user-driven library of useful websites for topics
+            * <a target="_blank" href="http://sextant-lhl.herokuapp.com/">Sextant</a>: A user-driven library of useful websites for topics
               covered in the bootcamp, designed to fit in seamlessly with LHL's
               Compass learning platform. <em>adam</em> was responsible for the PostgreSQL
               database and adapting his team's markup to use the learning
               platform's stylesheets.
 
-            * <a href="http://grogger.herokuapp.com/">Grogger</a>: A basic Twitter-style single page app using JQuery to
+            * <a target="_blank" href="http://grogger.herokuapp.com/">Grogger</a>: A basic Twitter-style single page app using JQuery to
               communicate with a back-end API.
 
 
     <em class="offset-anchor" id="--designer">--designer</em>
-        Designed, built, and continues to maintain <a href="https://github.com/jalovatt/Lokasenna_GUI/wiki">Lokasenna GUI</a>, a user
-        interface framework for the <a href="https://www.reaper.fm/">REAPER</a> digital audio workstation that gives
+        Designed, built, and continues to maintain <a target="_blank" href="https://github.com/jalovatt/Lokasenna_GUI/wiki">Lokasenna GUI</a>, a user
+        interface framework for the <a target="_blank" href="https://www.reaper.fm/">REAPER</a> digital audio workstation that gives
         scripters an easy-to-use set of interface elements, handles drawing and
         updates, and takes care of end-user event handling.
 
@@ -220,12 +96,12 @@ adam(1)                        Linux User's Manual                       adam(1)
 
         Notable REAPER projects:
 
-            * <a href="https://github.com/jalovatt/Lokasenna_GUI/wiki">Lokasenna GUI</a>
+            * <a target="_blank" href="https://github.com/jalovatt/Lokasenna_GUI/wiki">Lokasenna GUI</a>
 
-            * <a href="https://forum.cockos.com/showthread.php?t=186637">Radial Menu</a>: A fast, expandable toolbar replacement offering a
+            * <a target="_blank" href="https://forum.cockos.com/showthread.php?t=186637">Radial Menu</a>: A fast, expandable toolbar replacement offering a
               staggering amount of customizability for different workflows.
 
-            * <a href="https://forum.cockos.com/showthread.php?t=185358">Theory Helper</a>: Suite of tools that assist users in matching
+            * <a target="_blank" href="https://forum.cockos.com/showthread.php?t=185358">Theory Helper</a>: Suite of tools that assist users in matching
               musical notes to a scale, generating chords, and creating
               harmonies.
 
@@ -295,14 +171,12 @@ adam(1)                        Linux User's Manual                       adam(1)
 
     * <em>0.1.0</em>
         - February 18, 1984
-          Public alpha</main>
-<footer><em id="see-also">SEE ALSO</em>
-    * E-mail: jalovatt@hotmail.com
-    * Phone: (403)852-8780
-    * Github: https://github.com/jalovatt
-    * LinkedIn: https://www.linkedin.com/in/adam-lovatt-864b25127/
+          Public alpha
 
-                                  2018-11-20                              adam(1)
+<em id="contact">CONTACT</em>
+              * <a href="mailto://jalovatt@hotmail.com">jalovatt@hotmail.com</a>                 * <a target="_blank" href="https://github.com/jalovatt">Github</a>
+              * (403)852-8780                        * <a target="_blank" href="https://www.linkedin.com/in/adam-lovatt-864b25127/">LinkedIn</a>
 
-</footer></body>
-</html>
+                                 2018-11-20                              adam(1)
+
+</main></body></html>

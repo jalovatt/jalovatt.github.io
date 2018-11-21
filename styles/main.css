@@ -1,0 +1,99 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html {
+
+  --font: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+
+  --font-size: 1rem;
+  --font-size-double: calc(2*var(--font-size));
+  --font-size-half: calc(0.5*var(--font-size));
+  --font-size-minus: calc(-1*var(--font-size));
+  --font-size-minus-double: calc(-2*var(--font-size));
+  --font-size-minus-half: calc(-0.5*var(--font-size));
+
+  --header-offset: calc(14 * var(--font-size));
+  --header-offset-minus: calc(-1*var(--header-offset));
+
+  --text-color: #151515;
+  --bg-color: #FDFDFD;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+  /* background-color: red; */  /* to check for text > 80 characters */
+
+  font-size: var(--font-size);
+  font-family: var(--font);
+  white-space: pre;
+
+}
+
+body {
+  /* height: 100%; */
+  width: 80ch;
+
+  margin-top: var(--font-size-minus);
+  margin-bottom: var(--font-size-minus);
+  margin-left: auto;
+  margin-right: auto;
+
+  background-color: var(--bg-color);
+
+}
+
+header {
+
+  position: sticky;
+  top: 0px;
+
+  margin-top: calc(var(--font-size-minus) - 2px);
+  padding-bottom: var(--font-size);
+
+  border-bottom: 1px solid var(--text-color);
+
+  background-color: var(--bg-color);
+  box-shadow:
+    0px
+    var(--font-size-half)
+    var(--font-size)
+    0px
+    var(--bg-color);
+
+}
+
+main {
+  /* margin-top: var(--font-size-minus); */
+  padding-top: var(--font-size);
+}
+
+em {
+  font-weight: bold;
+  font-family: var(--text-bold);
+  font-style: normal;
+}
+
+a, a:active, a:visited {
+  color: inherit;
+}
+
+a:hover{
+  color: var(--bg-color);
+  background-color: var(--text-color);
+}
+
+.anchor-no-decoration {
+  text-decoration: none;
+}
+
+.offset-anchor:target {
+
+  padding-top: var(--header-offset);
+
+}
