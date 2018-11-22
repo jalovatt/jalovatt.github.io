@@ -19,7 +19,7 @@ html {
   --font-size-minus-double: calc(-2*var(--font-size));
   --font-size-minus-half: calc(-0.5*var(--font-size));
 
-  --header-offset: calc(14 * var(--font-size));
+  --header-offset: calc(17 * var(--font-size));
   --header-offset-minus: calc(-1*var(--header-offset));
 
   --text-color: #151515;
@@ -34,8 +34,6 @@ html {
 
   white-space: pre-wrap;
   word-wrap: break-word;
-
-  over
 
 }
 
@@ -81,9 +79,11 @@ em {
   font-weight: bold;
   font-family: var(--text-bold);
   font-style: normal;
+  font-size: inherit;
 }
 
 a, a:active, a:visited {
+  font-size: inherit;
   color: inherit;
 }
 
