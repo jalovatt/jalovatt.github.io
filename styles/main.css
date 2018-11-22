@@ -1,4 +1,5 @@
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+
   margin: 0;
   padding: 0;
   border: 0;
@@ -6,6 +7,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+
 }
 
 html {
@@ -22,12 +24,6 @@ html {
   --header-offset: calc(17 * var(--font-size));
   --header-offset-minus: calc(-1*var(--header-offset));
 
-  --text-color: #151515;
-  --bg-color: #FDFDFD;
-
-  color: var(--text-color);
-  background-color: var(--bg-color);
-  /* background-color: red; */  /* to check for text > 80 characters */
 
   font-size: var(--font-size);
   font-family: var(--font);
@@ -35,18 +31,69 @@ html {
   white-space: pre-wrap;
   word-wrap: break-word;
 
+
+  /* Colors adapted from Atom's One Dark and One Light themes */
+  --color-text-light: hsl(230, 8%, 24%);
+  --color-bg-light: hsl(230, 1%, 98%);
+  --color-blue-light: hsl(221, 87%, 60%);
+  --color-purple-light: hsl(301, 63%, 40%);
+
+  --color-text-dark: hsl(220, 14%, 71%);
+  --color-bg-dark: hsl(220, 13%, 18%);
+  --color-blue-dark: hsl(207, 82%, 66%);
+  --color-purple-dark: hsl(286, 60%, 67%);
+
+
+  --text-color: var(--color-text-light);
+  --bg-color:   var(--color-bg-light);
+
+  --text-color-emphasis: var(--color-purple-light);
+  --text-color-link: var(--color-blue-light);
+  --text-color-link-visited: var(--color-blue-light);
+
+  --toggle-duration: 0.5s;
+
+  color: var(--text-color);
+  background-color: var(--bg-color);
+
+  transition: background-color var(--toggle-duration);
+
+  scroll-behavior: smooth;
+
+}
+
+.dark-mode {
+
+  --text-color: var(--color-text-dark);
+  --text-color-emphasis: var(--color-purple-dark);
+  --text-color-link: var(--color-blue-dark);
+  --text-color-link-visited: var(--color-blue-dark);
+
+  --bg-color:   var(--color-bg-dark);
+
 }
 
 body {
-  /* height: 100%; */
+
   width: 80ch;
 
-  margin-top: var(--font-size-minus);
-  margin-bottom: var(--font-size-minus);
   margin-left: auto;
   margin-right: auto;
 
   background-color: var(--bg-color);
+  transition: background-color var(--toggle-duration);
+
+}
+
+main {
+
+  background-color: var(--bg-color);
+
+  transition:
+    color var(--toggle-duration),
+    background-color var(--toggle-duration),
+    box-shadow var(--toggle-duration),
+    border var(--toggle-duration);
 
 }
 
@@ -55,7 +102,7 @@ header {
   position: sticky;
   top: 0px;
 
-  margin-top: calc(var(--font-size-minus) - 2px);
+  margin-top: var(--font-size-minus-double);
   padding-bottom: var(--font-size);
 
   border-bottom: 1px solid var(--text-color);
@@ -68,28 +115,73 @@ header {
     0px
     var(--bg-color);
 
+  transition:
+    color var(--toggle-duration),
+    background-color var(--toggle-duration),
+    box-shadow var(--toggle-duration),
+    border var(--toggle-duration);
+
+}
+
+footer {
+
+  position: sticky;
+  bottom: 0px;
+
+  padding-top: var(--font-size-minus);
+
+  border-top: 1px solid var(--text-color);
+
+  background-color: var(--bg-color);
+  box-shadow:
+    0px
+    var(--font-size-minus-half)
+    var(--font-size)
+    0px
+    var(--bg-color);
+
+  transition:
+  color var(--toggle-duration),
+  background-color var(--toggle-duration),
+  box-shadow var(--toggle-duration),
+  border var(--toggle-duration);
+
 }
 
 main {
-  /* margin-top: var(--font-size-minus); */
   padding-top: var(--font-size);
 }
 
-em {
+em, .em {
+
   font-weight: bold;
-  font-family: var(--text-bold);
   font-style: normal;
-  font-size: inherit;
+
+  color: var(--text-color-emphasis);
+  transition: color var(--toggle-duration);
+
 }
 
-a, a:active, a:visited {
-  font-size: inherit;
-  color: inherit;
+a, a:active {
+
+  color: var(--text-color-link);
+  transition:
+    color var(--toggle-duration),
+    background-color var(--toggle-duration);
+
+}
+
+a:visited {
+
+  color: var(--text-color-link-visited);
+  transition: color var(--toggle-duration);
+
 }
 
 a:hover{
+
   color: var(--bg-color);
-  background-color: var(--text-color);
+  background-color: var(--text-color-link);
 }
 
 .anchor-no-decoration {
@@ -97,7 +189,5 @@ a:hover{
 }
 
 .offset-anchor:target {
-
   padding-top: var(--header-offset);
-
 }
