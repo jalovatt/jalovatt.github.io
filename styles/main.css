@@ -12,7 +12,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 html {
 
-  --font: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
+  --font: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
   --font-size: 1rem;
   --font-size-double: calc(2*var(--font-size));
@@ -24,34 +24,13 @@ html {
   --header-offset: calc(17 * var(--font-size));
   --header-offset-minus: calc(-1*var(--header-offset));
 
+  --toggle-duration: 0.5s;
 
   font-size: var(--font-size);
   font-family: var(--font);
 
   white-space: pre-wrap;
   word-wrap: break-word;
-
-
-  /* Colors adapted from Atom's One Dark and One Light themes */
-  --color-text-light: hsl(230, 8%, 24%);
-  --color-bg-light: hsl(230, 1%, 98%);
-  --color-blue-light: hsl(221, 87%, 60%);
-  --color-purple-light: hsl(301, 63%, 40%);
-
-  --color-text-dark: hsl(220, 14%, 71%);
-  --color-bg-dark: hsl(220, 13%, 18%);
-  --color-blue-dark: hsl(207, 82%, 66%);
-  --color-purple-dark: hsl(286, 60%, 67%);
-
-
-  --text-color: var(--color-text-light);
-  --bg-color:   var(--color-bg-light);
-
-  --text-color-emphasis: var(--color-purple-light);
-  --text-color-link: var(--color-blue-light);
-  --text-color-link-visited: var(--color-blue-light);
-
-  --toggle-duration: 0.5s;
 
   color: var(--text-color);
   background-color: var(--bg-color);
@@ -62,14 +41,37 @@ html {
 
 }
 
-.dark-mode {
+.theme-one-light {
 
-  --text-color: var(--color-text-dark);
-  --text-color-emphasis: var(--color-purple-dark);
-  --text-color-link: var(--color-blue-dark);
-  --text-color-link-visited: var(--color-blue-dark);
+  --text-color:          hsl(230,  8%, 24%);
+  --bg-color:            hsl(230,  1%, 98%);
+  --text-color-emphasis: hsl(301, 63%, 40%);
+  --text-color-link:     hsl(221, 87%, 60%);
+  --text-color-visited:  hsl(221, 87%, 60%);
 
-  --bg-color:   var(--color-bg-dark);
+
+
+}
+
+.theme-one-dark {
+
+  --text-color:          hsl(220, 14%, 71%);
+  --bg-color:            hsl(220, 13%, 18%);
+  --text-color-emphasis: hsl(286, 60%, 67%);
+  --text-color-link:     hsl(207, 82%, 66%);
+  --text-color-visited:  hsl(207, 82%, 66%);
+
+
+
+}
+
+.theme-monokai {
+
+  --text-color:          hsl(60,  30%, 96%);
+  --bg-color:            hsl(70,   8%, 15%);
+  --text-color-emphasis: hsl(338, 95%, 56%);
+  --text-color-link:     hsl(190, 81%, 67%);
+  --text-color-visited:  hsl(190, 81%, 67%);
 
 }
 
@@ -141,10 +143,10 @@ footer {
     var(--bg-color);
 
   transition:
-  color var(--toggle-duration),
-  background-color var(--toggle-duration),
-  box-shadow var(--toggle-duration),
-  border var(--toggle-duration);
+    color var(--toggle-duration),
+    background-color var(--toggle-duration),
+    box-shadow var(--toggle-duration),
+    border var(--toggle-duration);
 
 }
 
@@ -182,6 +184,7 @@ a:hover{
 
   color: var(--bg-color);
   background-color: var(--text-color-link);
+
 }
 
 .anchor-no-decoration {
@@ -191,3 +194,34 @@ a:hover{
 .offset-anchor:target {
   padding-top: var(--header-offset);
 }
+
+select {
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+  right: 0px;
+
+  text-align: right;
+
+  font-family: var(--font);
+  font-size: var(--font-size);
+  font-weight: bold;
+
+  color: var(--text-color-link);
+  background-color: var(--bg-color);
+  border: none;
+  transition:
+    color 0s,
+    background-color var(--toggle-duration);
+
+}
+
+select:hover {
+  color: var(--bg-color);
+  background-color: var(--text-color-link);
+}
+
+select::msg-expand { display: none }
