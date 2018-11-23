@@ -47,8 +47,6 @@ html {
   --text-color-link:     hsl(221, 87%, 60%);
   --text-color-visited:  hsl(221, 87%, 60%);
 
-
-
 }
 
 .theme-one-dark {
@@ -58,8 +56,6 @@ html {
   --text-color-emphasis: hsl(286, 60%, 67%);
   --text-color-link:     hsl(207, 82%, 66%);
   --text-color-visited:  hsl(207, 82%, 66%);
-
-
 
 }
 
@@ -173,7 +169,7 @@ a, a:active {
 
 a:visited {
 
-  color: var(--text-color-link-visited);
+  color: var(--text-color-visited);
   transition: color var(--toggle-duration);
 
 }
