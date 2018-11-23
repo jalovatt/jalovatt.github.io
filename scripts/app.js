@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const html = document.querySelector("html");
   const toggle = document.getElementById("toggle");
 
-  toggle.addEventListener("click", (event) => {
+  toggle.addEventListener("change", (event) => {
 
     event.preventDefault();
 
