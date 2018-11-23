@@ -24,7 +24,7 @@ html {
   --header-offset: calc(17 * var(--font-size));
   --header-offset-minus: calc(-1*var(--header-offset));
 
-  --toggle-duration: 0.5s;
+  --toggle-duration: 0.6s;
 
   font-size: var(--font-size);
   font-family: var(--font);
