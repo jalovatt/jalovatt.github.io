@@ -37,8 +37,6 @@ html {
 
   transition: background-color var(--toggle-duration);
 
-  scroll-behavior: smooth;
-
 }
 
 .theme-one-light {
