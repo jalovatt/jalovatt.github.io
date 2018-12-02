@@ -4,8 +4,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
   outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
+  /* vertical-align: baseline; */
   background: transparent;
 
 }
@@ -14,14 +13,13 @@ html {
 
   --font: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
-  --font-size: 1rem;
   --font-size-double: calc(2*var(--font-size));
   --font-size-half: calc(0.5*var(--font-size));
   --font-size-minus: calc(-1*var(--font-size));
   --font-size-minus-double: calc(-2*var(--font-size));
   --font-size-minus-half: calc(-0.5*var(--font-size));
 
-  --header-offset: calc(17 * var(--font-size));
+  --header-offset: calc(3 * var(--font-size));
   --header-offset-minus: calc(-1*var(--header-offset));
 
   --toggle-duration: 0.6s;
@@ -29,14 +27,36 @@ html {
   font-size: var(--font-size);
   font-family: var(--font);
 
-  white-space: pre-wrap;
-  word-wrap: break-word;
+  /* white-space: pre-wrap;
+  word-wrap: break-word; */
 
   color: var(--text-color);
   background-color: var(--bg-color);
 
   transition: background-color var(--toggle-duration);
 
+}
+
+.pre {
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+
+}
+
+.indent {
+  padding-left: var(--indent-size);
+  /* display: inline-block; */
+  /* position: relative; */
+}
+
+.menu-name {
+  vertical-align: top;
+}
+
+.menu-items {
+  max-width: calc(100% - 9ch);
+  display: inline-block;
 }
 
 .theme-one-light {
@@ -71,7 +91,7 @@ html {
 
 body {
 
-  width: 80ch;
+  width: var(--width);
 
   margin-left: auto;
   margin-right: auto;
@@ -81,7 +101,11 @@ body {
 
 }
 
+
 main {
+
+  /* padding-top: var(--font-size); */
+  /* margin-top: var(--header-offset); */
 
   background-color: var(--bg-color);
 
@@ -124,7 +148,7 @@ footer {
   position: sticky;
   bottom: 0px;
 
-  padding-top: var(--font-size-minus);
+  padding-top: var(--font-size);
 
   border-top: 1px solid var(--text-color);
 
@@ -144,8 +168,13 @@ footer {
 
 }
 
-main {
-  padding-top: var(--font-size);
+div {
+  display: inline-block;
+}
+
+p {
+  margin-bottom: 1rem;
+  /* display: inline-block; */
 }
 
 em, .em {
@@ -156,6 +185,8 @@ em, .em {
   color: var(--text-color-emphasis);
   transition: color var(--toggle-duration);
 
+  white-space: nowrap;
+
 }
 
 a, a:active {
@@ -165,12 +196,16 @@ a, a:active {
     color var(--toggle-duration),
     background-color var(--toggle-duration);
 
+  white-space: nowrap;
+
 }
 
 a:visited {
 
   color: var(--text-color-visited);
   transition: color var(--toggle-duration);
+
+  white-space: nowrap;
 
 }
 
@@ -179,15 +214,17 @@ a:hover{
   color: var(--bg-color);
   background-color: var(--text-color-link);
 
+  white-space: nowrap;
+
 }
 
 .anchor-no-decoration {
   text-decoration: none;
 }
 
-.offset-anchor:target {
-  padding-top: var(--header-offset);
-}
+/* .offset-anchor:target {
+  padding-top: var(--header-offset-minus);
+} */
 
 select {
 
@@ -195,13 +232,8 @@ select {
   -moz-appearance: none;
   appearance: none;
 
-  position: absolute;
-  right: 0px;
-
-  text-align: right;
-
   font-family: var(--font);
-  font-size: var(--font-size);
+  font-size: inherit;
   font-weight: bold;
 
   color: var(--text-color-link);
@@ -219,3 +251,68 @@ select:hover {
 }
 
 select::msg-expand { display: none }
+
+.center-title {
+  padding-left: calc((100% - 16ch) / 2 - 7ch);
+}
+
+.center-headings {
+  padding-left: calc((100% - (30ch)) / 2);
+}
+
+.center-contacts {
+  padding-left: calc((100% - 54ch) / 2);
+}
+
+.center-date {
+  padding-left: calc((100% - 10ch) / 2);
+}
+
+.align-right {
+  position: absolute;
+  right: 0px;
+
+  text-align: right;
+}
+
+html {
+
+  --width: 80ch;
+  --indent-size: 4ch;
+  --font-size: 1rem;
+
+}
+
+@media screen and (max-width: 799px) {
+  html {
+    --width: 70ch;
+  }
+}
+
+@media (max-width: 699px) {
+  html {
+    --width: 60ch;
+    --indent-size: 2ch;
+    --font-size: 0.9rem;
+  }
+
+  header,
+  footer {
+    position: relative;
+  }
+}
+
+@media (max-width: 599px) {
+  html {
+    --width: 50ch;
+  }
+}
+
+@media (max-width: 499px) {
+  html {
+    --width: 40ch;
+    --indent-size: 0ch;
+    --font-size: 0.8rem;
+  }
+
+}
