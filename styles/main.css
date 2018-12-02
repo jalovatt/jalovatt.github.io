@@ -43,50 +43,11 @@ html {
 
 }
 
-@media screen and (max-width: 799px) {
-  html {
-    --width: 70ch;
-    --font-size: 0.95rem;
-    --header-size: 19;
-  }
-}
-
-@media screen and (max-width: 699px) {
-  html {
-    --width: 60ch;
-    --indent-size: 2ch;
-    --font-size: 0.9rem;
-  }
-
-  header,
-  footer {
-    position: relative;
-  }
-}
-
-@media screen and (max-width: 599px) {
-  html {
-    --width: 50ch;
-    --font-size: 0.85rem;
-    --header-size: 20;
-  }
-}
-
-@media screen and (max-width: 499px) {
-  html {
-    --width: 40ch;
-    --indent-size: 0ch;
-    --font-size: 0.8rem;
-    --header-size: 25;
-  }
-
-}
-
 .theme-monokai-light {
 
   --text-color:          hsl(194, 14%, 24%);
   --bg-color:            hsl(44,  10%, 99%);
-  --text-color-emphasis: hsl(331, 64%, 52%);
+  --text-color-emphasis: hsl(340, 66%, 52%);
   --text-color-link:     hsl(205, 70%, 48%);
   --text-color-visited:  hsl(205, 70%, 48%);
 
@@ -298,7 +259,7 @@ select {
   border: none;
   transition:
     color 0s,
-    background-color var(--toggle-duration);
+    background-color 0s;
 
 }
 
@@ -330,4 +291,48 @@ select::msg-expand { display: none }
   right: 0px;
 
   text-align: right;
+}
+
+
+@media screen and (max-width: 799px) {
+  html {
+    --width: 72ch;
+    --font-size: 0.95rem;
+    --header-size: 19;
+  }
+
+  .center-title {
+    padding-left: calc(((100% - 7ch - 22ch) - 16ch) / 2);
+  }
+}
+
+@media screen and (max-width: 699px) {
+  html {
+    --width: 65ch;
+    --indent-size: 2ch;
+    --font-size: 0.9rem;
+  }
+
+  /* header,
+  footer {
+    position: relative;
+  } */
+}
+
+@media screen and (max-width: 599px) {
+  html {
+    --width: 58ch;
+    --font-size: 0.85rem;
+    --header-size: 20;
+  }
+}
+
+@media screen and (max-width: 499px) {
+  html {
+    --width: 54ch;
+    --indent-size: 0ch;
+    --font-size: 0.8rem;
+    --header-size: 25;
+  }
+
 }
