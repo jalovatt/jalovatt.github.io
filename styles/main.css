@@ -59,6 +59,26 @@ html {
   display: inline-block;
 }
 
+.theme-monokai-light {
+
+  --text-color:          hsl(70,   8%, 15%);
+  --bg-color:            hsl(60,  5%, 95%);
+  --text-color-emphasis: hsl(330, 95%, 35%);
+  --text-color-link:     hsl(210, 91%, 40%);
+  --text-color-visited:  hsl(210, 91%, 40%);
+
+}
+
+.theme-monokai-dark {
+
+  --text-color:          hsl(60,  30%, 96%);
+  --bg-color:            hsl(70,   8%, 15%);
+  --text-color-emphasis: hsl(338, 95%, 56%);
+  --text-color-link:     hsl(190, 81%, 67%);
+  --text-color-visited:  hsl(190, 81%, 67%);
+
+}
+
 .theme-one-light {
 
   --text-color:          hsl(230,  8%, 24%);
@@ -79,15 +99,6 @@ html {
 
 }
 
-.theme-monokai {
-
-  --text-color:          hsl(60,  30%, 96%);
-  --bg-color:            hsl(70,   8%, 15%);
-  --text-color-emphasis: hsl(338, 95%, 56%);
-  --text-color-link:     hsl(190, 81%, 67%);
-  --text-color-visited:  hsl(190, 81%, 67%);
-
-}
 
 body {
 
