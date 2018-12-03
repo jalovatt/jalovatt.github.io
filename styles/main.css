@@ -4,7 +4,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   padding: 0;
   border: 0;
   outline: 0;
-  /* vertical-align: baseline; */
+  vertical-align: top;
   background: transparent;
 
 }
@@ -102,7 +102,7 @@ html {
 }
 
 .menu-items {
-  max-width: calc(100% - 9ch);
+  max-width: calc(100% - 10ch);
   display: inline-block;
 }
 
@@ -280,7 +280,7 @@ select::msg-expand { display: none }
 }
 
 .center-contacts {
-  padding-left: calc((100% - 54ch) / 2);
+  padding-left: calc((100% - 50ch) / 2);
 }
 
 .center-date {
