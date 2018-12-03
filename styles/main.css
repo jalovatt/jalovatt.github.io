@@ -343,6 +343,11 @@ select::msg-expand { display: none }
 
 @media screen and (max-width: 420px) {
   html {
-    --width: 45ch;
+    --width: 42ch;
   }
+
+  .center-title {
+    visibility: hidden;
+  }
+
 }
