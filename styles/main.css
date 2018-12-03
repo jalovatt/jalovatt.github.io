@@ -13,7 +13,7 @@ html {
 
   --width: 80ch;
 
-  --font: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --font: "DejaVu Sans Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
   --font-size: 1rem;
   --font-size-double: calc(2*var(--font-size));
@@ -32,6 +32,7 @@ html {
 
   font-size: var(--font-size);
   font-family: var(--font);
+  line-height: 1;
 
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -299,6 +300,7 @@ select::msg-expand { display: none }
     --width: 72ch;
     --font-size: 0.95rem;
     --header-size: 19;
+    line-height: 1.1;
   }
 
   .center-title {
@@ -321,18 +323,20 @@ select::msg-expand { display: none }
 
 @media screen and (max-width: 599px) {
   html {
-    --width: 58ch;
-    --font-size: 0.85rem;
+    --width: 55ch;
+    --font-size: 0.88rem;
     --header-size: 20;
+    line-height: 1.2;
   }
 }
 
 @media screen and (max-width: 499px) {
   html {
-    --width: 54ch;
+    --width: 50ch;
     --indent-size: 0ch;
-    --font-size: 0.8rem;
+    --font-size: 0.85rem;
     --header-size: 25;
+    line-height: 1.3;
   }
 
 }
