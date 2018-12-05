@@ -347,6 +347,7 @@ select::msg-expand { display: none }
     --indent-size: 0ch;
     --font-size: 0.85rem;
     --header-size: 11;
+    --footer-size: 10;
     line-height: 1.3;
   }
 }
@@ -354,6 +355,11 @@ select::msg-expand { display: none }
 @media screen and (max-width: 420px) {
   html {
     --width: 42ch;
+    --footer-size: 13;
+  }
+
+  footer {
+    padding-bottom: var(--font-size);
   }
 
   .print-block {
