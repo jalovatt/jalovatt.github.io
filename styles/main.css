@@ -22,9 +22,12 @@ html {
   --font-size-minus-double: calc(-2*var(--font-size));
   --font-size-minus-half: calc(-0.5*var(--font-size));
 
-  --header-size: 16;
+  --header-size: 13;
   --header-offset: calc(var(--header-size) * var(--font-size));
   --header-offset-minus: calc(-1*var(--header-offset));
+
+  --footer-size: 9;
+  --footer-offset: calc(var(--footer-size) * var(--font-size));
 
   --indent-size: 4ch;
 
@@ -123,6 +126,7 @@ body {
 main {
 
   padding-top: var(--font-size);
+  padding-bottom: var(--footer-offset);
   /* margin-top: var(--header-offset); */
 
   background-color: var(--bg-color);
@@ -140,7 +144,7 @@ header {
   position: sticky;
   top: 0px;
 
-  /* margin-top: var(--font-size-minus-double); */
+  padding-top: var(--font-size-double);
   padding-bottom: var(--font-size);
 
   border-bottom: 1px solid var(--text-color);
@@ -163,10 +167,12 @@ header {
 
 footer {
 
-  position: sticky;
+  position: fixed;
+  width: var(--width);
   bottom: 0px;
 
   padding-top: var(--font-size);
+  padding-bottom: var(--font-size-double);
 
   border-top: 1px solid var(--text-color);
 
@@ -223,7 +229,7 @@ a:visited {
   color: var(--text-color-visited);
   transition: color var(--toggle-duration);
 
-  white-space: nowrap;
+  /* white-space: nowrap; */
 
 }
 
@@ -232,7 +238,7 @@ a:hover{
   color: var(--bg-color);
   background-color: var(--text-color-link);
 
-  white-space: nowrap;
+  /* white-space: nowrap; */
 
 }
 
@@ -272,19 +278,27 @@ select:hover {
 select::msg-expand { display: none }
 
 .center-title {
-  padding-left: calc((100% - 16ch) / 2 - 7ch);
+  padding-left: calc((100% - 6ch) / 2);
+}
+
+.center-name {
+  padding-left: calc((100% - 14ch) / 2);
 }
 
 .center-headings {
-  padding-left: calc((100% - (30ch)) / 2);
+  padding-left: calc((100% - 40ch) / 2);
 }
 
 .center-contacts {
-  padding-left: calc((100% - 50ch) / 2);
+  padding-left: calc((100% - 44ch) / 2);
 }
 
 .center-date {
   padding-left: calc((100% - 10ch) / 2);
+}
+
+.toggle-dropdown {
+  top: 0px;
 }
 
 .align-right {
@@ -299,12 +313,8 @@ select::msg-expand { display: none }
   html {
     --width: 72ch;
     --font-size: 0.95rem;
-    --header-size: 19;
+    --header-size: 15;
     line-height: 1.1;
-  }
-
-  .center-title {
-    padding-left: calc(((100% - 7ch - 22ch) - 16ch) / 2);
   }
 }
 
@@ -313,19 +323,20 @@ select::msg-expand { display: none }
     --width: 65ch;
     --indent-size: 2ch;
     --font-size: 0.9rem;
+    --header-size: 10;
   }
 
-  /* header,
-  footer {
-    position: relative;
-  } */
+  .responsive-hide {
+    display: none;
+  }
+
 }
 
 @media screen and (max-width: 599px) {
   html {
     --width: 55ch;
     --font-size: 0.88rem;
-    --header-size: 20;
+    --header-size: 10;
     line-height: 1.2;
   }
 }
@@ -335,10 +346,9 @@ select::msg-expand { display: none }
     --width: 50ch;
     --indent-size: 0ch;
     --font-size: 0.85rem;
-    --header-size: 25;
+    --header-size: 11;
     line-height: 1.3;
   }
-
 }
 
 @media screen and (max-width: 420px) {
@@ -346,8 +356,94 @@ select::msg-expand { display: none }
     --width: 42ch;
   }
 
-  .center-title {
-    visibility: hidden;
+  .print-block {
+    display: block;
+    white-space: normal !important;
+    margin-bottom: var(--font-size-minus);
+  }
+}
+
+@media print {
+
+  html {
+    --width: 100%;
+    --indent-size: 0ch;
+    --font-size: 12pt;
+    margin: 1cm;
+    line-height: 1.1;
+  }
+
+  header {
+    position: static;
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  footer {
+    position: absolute;
+    border: none;
+  }
+
+  section {
+    page-break-inside: avoid;
+  }
+
+  * {
+    background-color: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+  }
+
+  a {
+    word-wrap: break-word !important;
+  }
+
+  a[href^="http"]:not([href*="jalovatt.github.io"]):after {
+    content: " (" attr(href) ")";
+    word-wrap: break-word !important;
+  }
+
+  .offset-anchor:target {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  select {
+    display: none;
+  }
+
+  .center-headings {
+    display: none;
+  }
+
+  .center-contacts {
+    word-wrap: break-word;
+    padding-left: 0;
+    /* white-space: normal !important; */
+  }
+
+  main {
+    position: relative;
+  }
+
+  /* #projects, */
+  #skills,
+  #history {
+    position: relative;
+    display: block;
+    page-break-before: always;
+    break-inside: avoid;
+  }
+
+  .print-block {
+    display: block;
+    white-space: normal !important;
+    margin-bottom: var(--font-size-minus);
+  }
+
+  .print-experienced {
+    margin-left: 4ch;
   }
 
 }
