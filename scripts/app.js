@@ -17,4 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   });
 
+  toggle.style.width = String(`[THEME: ${toggle.value}]`).length + "ch";
+
 });

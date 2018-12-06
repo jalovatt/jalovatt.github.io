@@ -22,7 +22,7 @@ html {
   --font-size-minus-double: calc(-2*var(--font-size));
   --font-size-minus-half: calc(-0.5*var(--font-size));
 
-  --header-size: 13;
+  --header-size: 14;
   --header-offset: calc(var(--header-size) * var(--font-size));
   --header-offset-minus: calc(-1*var(--header-offset));
 
@@ -35,7 +35,7 @@ html {
 
   font-size: var(--font-size);
   font-family: var(--font);
-  line-height: 1;
+  /* line-height: 1; */
 
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -374,9 +374,9 @@ select::msg-expand { display: none }
   html {
     --width: 100%;
     --indent-size: 0ch;
-    --font-size: 12pt;
+    --font-size: 10pt;
     margin: 1cm;
-    line-height: 1.1;
+    line-height: 1.2;
   }
 
   header {
@@ -431,11 +431,18 @@ select::msg-expand { display: none }
 
   main {
     position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
-  /* #projects, */
-  #skills,
-  #history {
+  #summary,
+  #history,
+  #projects {
+    margin-top: var(--font-size-double);
+    display: block;
+  }
+
+  #skills {
     position: relative;
     display: block;
     page-break-before: always;
