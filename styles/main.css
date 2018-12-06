@@ -86,6 +86,24 @@ html {
   --text-color-visited:  hsl(207, 82%, 66%);
 
 }
+.theme-plain-light {
+
+  --text-color:          hsl(0, 0%, 18%);
+  --bg-color:            hsl(0, 0%, 98%);
+  --text-color-emphasis: hsl(0, 0%, 18%);
+  --text-color-link:     hsl(0, 0%, 18%);
+  --text-color-visited:  hsl(0, 0%, 18%);
+
+}
+.theme-plain-dark {
+
+  --text-color:          hsl(0, 0%, 85%);
+  --bg-color:            hsl(0, 0%, 18%);
+  --text-color-emphasis: hsl(0, 0%, 85%);
+  --text-color-link:     hsl(0, 0%, 85%);
+  --text-color-visited:  hsl(0, 0%, 85%);
+
+}
 
 .pre {
 
