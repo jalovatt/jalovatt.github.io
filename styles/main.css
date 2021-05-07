@@ -11,9 +11,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 
 html {
 
-  --width: 80ch;
+  --width: 100ch;
 
-  --font: "DejaVu Sans Mono", SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  --font: SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
   --font-size: 1rem;
   --font-size-double: calc(2*var(--font-size));
@@ -31,7 +31,7 @@ html {
 
   --indent-size: 4ch;
 
-  --toggle-duration: 0.6s;
+  --toggle-duration: 0.3s;
 
   font-size: var(--font-size);
   font-family: var(--font);
@@ -88,20 +88,20 @@ html {
 }
 .theme-plain-light {
 
-  --text-color:          hsl(0, 0%, 18%);
-  --bg-color:            hsl(0, 0%, 98%);
-  --text-color-emphasis: hsl(0, 0%, 18%);
-  --text-color-link:     hsl(0, 0%, 18%);
-  --text-color-visited:  hsl(0, 0%, 18%);
+  --text-color:          hsl(0, 0%, 10%);
+  --bg-color:            hsl(0, 0%, 100%);
+  --text-color-emphasis: hsl(0, 0%, 10%);
+  --text-color-link:     hsl(0, 0%, 10%);
+  --text-color-visited:  hsl(0, 0%, 10%);
 
 }
 .theme-plain-dark {
 
-  --text-color:          hsl(0, 0%, 85%);
-  --bg-color:            hsl(0, 0%, 18%);
-  --text-color-emphasis: hsl(0, 0%, 85%);
-  --text-color-link:     hsl(0, 0%, 85%);
-  --text-color-visited:  hsl(0, 0%, 85%);
+  --text-color:          hsl(0, 0%, 90%);
+  --bg-color:            hsl(0, 0%, 10%);
+  --text-color-emphasis: hsl(0, 0%, 90%);
+  --text-color-link:     hsl(0, 0%, 90%);
+  --text-color-visited:  hsl(0, 0%, 90%);
 
 }
 
@@ -247,16 +247,12 @@ a:visited {
   color: var(--text-color-visited);
   transition: color var(--toggle-duration);
 
-  /* white-space: nowrap; */
-
 }
 
 a:hover{
 
   color: var(--bg-color);
   background-color: var(--text-color-link);
-
-  /* white-space: nowrap; */
 
 }
 
@@ -324,6 +320,12 @@ select::msg-expand { display: none }
   right: 0px;
 
   text-align: right;
+}
+
+@media screen and (max-width: 999px) {
+  html {
+    --width: 80ch;
+  }
 }
 
 
@@ -444,7 +446,6 @@ select::msg-expand { display: none }
   .center-contacts {
     word-wrap: break-word;
     padding-left: 0;
-    /* white-space: normal !important; */
   }
 
   main {
@@ -455,16 +456,18 @@ select::msg-expand { display: none }
 
   #summary,
   #history,
-  #projects {
+  #experience {
     margin-top: var(--font-size-double);
     display: block;
+  }
+
+  #experience {
+    page-break-before: always;
   }
 
   #skills {
     position: relative;
     display: block;
-    page-break-before: always;
-    break-inside: avoid;
   }
 
   .print-block {
@@ -476,5 +479,4 @@ select::msg-expand { display: none }
   .print-experienced {
     margin-left: 4ch;
   }
-
 }

@@ -37,59 +37,104 @@
   </div>
 
   <div class="center-headings">
-    <em><a class="anchor-no-decoration" href="#summary">[SUMMARY]</a></em>    <em><a class="anchor-no-decoration" href="#projects">[PROJECTS]</a></em>  <em><a class="anchor-no-decoration" href="#skills">[SKILLS]</a></em>  <em><a class="anchor-no-decoration" href="#history">[HISTORY]</a></em>
+    <em><a class="anchor-no-decoration" href="#summary">[SUMMARY]</a></em>    <em><a class="anchor-no-decoration" href="#experience">[EXPERIENCE]</a></em> <em><a class="anchor-no-decoration" href="#skills">[SKILLS]</a></em>  <em><a class="anchor-no-decoration" href="#history">[HISTORY]</a></em>
   </div>
 </header>
 
 <main>
-  <em class="offset-anchor" id="summary">SUMMARY</em>
+  <h2 class="offset-anchor" id="summary">SUMMARY</h2>
   <section class="indent">
     <p>
-      Web developer with experience in UI design and project management, and proficiency in JavaScript, HTML5, CSS3, Ruby, and Lua.
+      Software developer with experience in UI design and project management, proficient with modern web technologies such as React and Kubernetes.
     </p>
     <p>
       I love logic, puzzles, and visual design, and I'm fascinated by the interplay between them that we find on the modern Web. Having gotten into coding during the early years of JavaScript, the improvements that have been made in recent years seem just short of wizardry. Who doesn't want to be a wizard?
     </p>
     <p>
-      I'm excited to learn anything and everything about this industry - right down to nerdy subjects like typography or how to make sites load more efficiently - and eager to put my existing skills to use making your app and your codebase stand out.
+      I'm excited to learn anything and everything about this industry - right down to nerdy things like DevOps, typography, or how to make sites load more efficiently - and eager to put my existing skills to use making your app and your codebase stand out.
     </p>
   </section>
 
-  <em class="offset-anchor" id="projects">PROJECTS</em>
+  <h2 class="offset-anchor" id="experience">EXPERIENCE</h2>
   <section class="indent">
+    <h3>VizworX Inc.</h3>
     <p>
-      * <a target="_blank" href="https://apps2.cer-rec.gc.ca/conditions">Conditions</a>: A visualization for Canada's Energy Regulator that guides users through the large number of legal conditions attached to pipelines and other energy projects.
+      As both a junior and now senior developer, I've contributed to or led several notable projects for VizworX.
     </p>
+    <h4><a target="_blank" href="https://energyphile.philespace.com">Philespace</a></h4>
+    <p>A platform that enables users to create, share, and view collections such as art or museum exhibits.</p>
 
-    <p>
-      Notable projects for <a target="_blank" href="https://www.reaper.fm/">REAPER</a>, a digital audio workstation:
+    <p>After a successful launch as a client's personal site, I was brought on to assist in transforming Philespace into a multi-tenant platform.</p>
+
+    <ul class="indent">
+      <li>Rewrote the app's draggable "gallery" to improve performance, code clarity, and maintainability</li>
+      <li>Cleaned up and refactored the app's color styling to allow tenant-specific theming</li>
+      <li>Built a screenshotting service to handle tenants' content updates</li>
+      <li>Added permissions-based authorization to all GraphQL requests</li>
+      <li>Assisted in creating an <a href="#autocrud">open-source GraphQL library</a> to manage the bulk of our database interactions</li>
+      <li>Updated the React codebase from class components and a complex Redux structure to simpler, functional components and more efficient state management using Jotai</li>
+      <li>Helped to convert the project into a monorepo with a Kubernetes-based deployment architecture</li>
+    </ul>
+
+    <h4><a target="_blank" href="https://apps2.cer-rec.gc.ca/conditions">Conditions</a></h4>
+
+    <p>A visualization for Canada's Energy Regulator that guides users through the large number of legal conditions attached to pipelines and other energy projects, using a design from the University of Calgary's iLab.</p>
+
+    <ul class="indent">
+      <li>Implemented an animated tutorial, for which various parts of the visualization needed to hide, fade in, etc.</li>
+      <li>Mapped each company's projects into flaglike structures around the company wheel. The flags were constructed dynamically, but had to be as compact as possible without overlapping others.</li>
+    </ul>
+
+    <p>This project was open-sourced upon completion, and can be found <a target="_blank" href="https://github.com/CER-REC/conditions">on Github</a>.</p>
+
+    <h4><a target="_blank" href="https://vizworx.com/data-viz/aurora/">Aurora</a></h4>
+
+    <p>Working for a team from the University of Calgary's Astronomy department, we built a 3D visualization displaying current and historical aurora data around the world. </p>
+
+    <ul class="indent">
+      <li>Implemented a 3D globe and aurora overlay using Three.js</li>
+      <li>Built a custom GraphQL server that could poll and cache our data sources</li>
+      <li>Designed a fetching and compression strategy that would allow incoming datasets to be read into the graphics pipeline as quickly as possible, allowing near-realtime "playback" of historical data.</li>
+    </ul>
+
+    <h4>TimeworX</h4>
+
+    <p>After growing beyond what our existing time management software could handle, I led the design and construction of an internal tool to generate timesheets and invoices from employees' <a target="_blank" src="https://toggl.com">Toggl</a> data, identify formatting issues, and correlate entries with corresponding Jira tickets.</p>
+
+  </section>
+
+  <section class="indent">
+    <h3>Open Source</h3>
+    <h4 id="autocrud">AutoCRUD</h4>
+
+    <p>Built to support VizworX's Philespace project as a replacement for <a target="_blank" href="https://www.graph.cool/">Graphcool</a>, prior to its sunset date, AutoCRUD extends a GraphQL schema with Knex-based queries and mutations based on the user's types.</p>
+
+    <ul class="indent">
+      <li>Implemented a set of lifecycle hooks, allowing the library's users to inject custom logic such as authorization or external side effects</li>
+      <li>Added a reporting system to support users' logging/analytics requirements</li>
+      <li>Added a thorough test suite, including database mocking utilities, custom Jest matchers allowing assertions on a GraphQL schema, and testing in multiple database clients</li>
+      <li>Documented the library's usage, setup, and directives</li>
+    </ul>
+
+    <h3>Reaper Scripts</h3>
+
+    <p>Tools for <a target="_blank" href="http://reaper.fm/">Reaper</a>'s users and open-source community, some of which have been used by established music, sound design, and game development studios.</p>
+
+    <ul class="indent">
+      <li><a target="_blank" href="https://github.com/jalovatt/scythe">Scythe, formerly Lokasenna GUI</a> - a full-featured UI toolkit, filling in a large gap in Reaper's basic "draw a line from A to B" graphics API</li>
+      <li><a target="_blank" href="https://forum.cockos.com/showthread.php?t=186637">Radial Menu</a> - A fast, expandable toolbar replacement offering a large amount of customizability for different workflows</li>
+      <li><a target="_blank" href="https://forum.cockos.com/showthread.php?t=185358">Theory Helper</a> - A suite of tools that assist users in matching musical notes to a scale, generating chords, and creating harmonies.</li>
+      <li><a target="_blank" href="https://github.com/ReaTeam/ReaScripts">ReaTeam Scripts</a> - Dozens of smaller scripts and utilities</li>
+    </ul>
+
+    <h3>Lighthouse Labs'&nbsp;<wbr><a target="_blank" href="https://www.lighthouselabs.ca/web-bootcamp">Web Development Bootcamp</a></h3>
+
+    <p class="indent">
+      * <a target="_blank" href="http://where-on-wikipedia.herokuapp.com/">Where on Wikipedia</a> - For our final project we chose to recreate the Carmen Sandiego games, using Wikipedia's API to generate random content.
     </p>
 
     <p class="indent">
-      * <a target="_blank" href="https://github.com/jalovatt/Lokasenna_GUI">Lokasenna GUI</a><br>
-        The only full-featured UI toolkit for REAPER scripts.
-    </p>
-
-    <p class="indent">
-      * <a target="_blank" href="https://forum.cockos.com/showthread.php?t=186637">Radial Menu</a><br>
-      A fast, expandable toolbar replacement offering a staggering amount of customizability for different workflows.
-    </p>
-
-    <p class="indent">
-      * <a target="_blank" href="https://forum.cockos.com/showthread.php?t=185358">Theory Helper</a><br>
-      A suite of tools that assist users in matching musical notes to a scale, generating chords, and creating harmonies.
-    </p>
-
-    <p>
-      Web projects developed for Lighthouse Labs'&nbsp;<wbr><a target="_blank" href="https://www.lighthouselabs.ca/web-bootcamp">Web Development Bootcamp</a>:
-    </p>
-
-    <p class="indent">
-      * <a target="_blank" href="http://where-on-wikipedia.herokuapp.com/">Where on Wikipedia</a>: A recreation of the Carmen Sandiego games, using Wikipedia's API to generate random game content.
-    </p>
-
-    <p class="indent">
-      * <a target="_blank" href="https://github.com/jalovatt/lighthouse-chatty#haxxy">Haxxy</a>: A real-time chat app built with React and a Websocket-based Express server.
+      * <a target="_blank" href="https://github.com/jalovatt/lighthouse-chatty#haxxy">Haxxy</a> - A real-time chat app built with React and a Websocket-based Express server.
     </p>
 
     <p class="indent">
