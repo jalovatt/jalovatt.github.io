@@ -1,19 +1,13 @@
-# Page title: J. Adam Lovatt
-# TODO: Link all the things
-# J. ADAM LOVATT
+# J. Adam Lovatt
 
-## SYNOPSIS
-
-**TODO: TOC**
-
-## SUMMARY
+## Summary
 Software developer with experience in UI design and project management, proficient with modern web technologies such as React and Kubernetes.
 
 I love logic, puzzles, and visual design, and I'm fascinated by the interplay between them that we find on the modern Web. Having gotten into coding during the early years of JavaScript, the improvements that have been made in recent years seem just short of wizardry. Who doesn't want to be a wizard?
 
 I'm excited to learn anything and everything about this industry - right down to nerdy things like DevOps, typography, or how to make sites load more efficiently - and eager to put my existing skills to use making your app and your codebase stand out.
 
-## EXPERIENCE
+## Experience
 
 ### VizworX Inc.
 
@@ -81,13 +75,14 @@ For our final project we chose to recreate the Carmen Sandiego games, using Wiki
 #### Haxxy (https://github.com/jalovatt/lighthouse-chatty#haxxy)
 A real-time chat app built with React and a Websocket-based Express server.
 
-## SKILLS
+## Skills
 
-### --developer
+### Developer
 
 Experienced with:
 - React
 - Node.js
+- Docker
 - Kubernetes
 - Webpack
 - SQL
@@ -98,26 +93,26 @@ Interested in:
 - Jotai/Recoil
 - Snowpack/ESBuild
 
-### --designer
+### Designer
 I created [a UI framework](https://github.com/jalovatt/lokasenna_gui) for [Reaper](https://reaper.fm), providing scripters with a large set of UI components, efficient updating and rendering, and easy-to-use event handling.
 
-### --leader
+### Leader
 As an electrician, I've effectively headed teams of up to 20 workers in the completion of long-term projects with a minimal amount of outside assistance.
 
-### --mentor
+### Mentor
 I love teaching others, and have been known to answer simple questions of syntax or usage with short essays covering a variety of use cases, pros, cons, and pitfalls.
 
-### --guitarist,
-### --music-lover
+### Guitarist,
+### Music Lover
 I live and breathe music, from classical to jazz to folk to death metal (though I'll happily admit to being stuck in the 1980s)
 
-### --dog-lover
+### Dog Lover
 I firmly believe that Boston Terriers are one of mankind's greatest achievements.
 
-### --shameless-geek
+### Shameless Geek
 Sci-fi? Fantasy? Horror? Spending hours at a time reading about ridiculously obscure topics on Wikipedia? Yes please.
 
-## PERSONAL HISTORY
+## Personal History
 ### v3.1 - VizworX Inc. (January 2019-Present)
 Software developer, working on custom solutions and data visualizations.
 
@@ -129,11 +124,11 @@ Commercial and industrial work on a number of projects across western Canada.
 
 ### v1.0 - Various retail positions
 
-### v0.1 - February 18, 1984
+### v0.1 - 1984
 
-## CONTACT
+## Contact
 - jalovatt@hotmail.com
-- (403)852-8780
-- Github
-- Gitlab
-- LinkedIn
+- 403-852-8780
+- [Github](https://github.com/jalovatt)
+- [Gitlab](https://gitlab.com/jalovatt)
+- [LinkedIn](https://www.linkedin.com/in/adam-lovatt/)
