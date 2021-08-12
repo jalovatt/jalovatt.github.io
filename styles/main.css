@@ -90,9 +90,9 @@ html {
 
   --text-color:          hsl(0, 0%, 10%);
   --bg-color:            hsl(0, 0%, 100%);
-  --text-color-emphasis: hsl(0, 0%, 10%);
-  --text-color-link:     hsl(0, 0%, 10%);
-  --text-color-visited:  hsl(0, 0%, 10%);
+  --text-color-emphasis: hsl(0, 0%, 0%);
+  --text-color-link:     hsl(0, 0%, 0%);
+  --text-color-visited:  hsl(0, 0%, 0%);
 
 }
 .theme-plain-dark {
@@ -214,6 +214,11 @@ div {
   display: inline-block;
 }
 
+h1, h2, h3, h4 {
+  color: var(--text-color-emphasis);
+  font-size: var(--font-size);
+}
+
 p {
   margin-bottom: 1rem;
   /* display: inline-block; */
@@ -263,6 +268,17 @@ a:hover{
 .offset-anchor:target {
   padding-top: var(--header-offset);
   margin-top: var(--header-offset-minus);
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 1rem;
+}
+
+li::before {
+  content: "*";
+  padding-right: 1ch;
+  color: inherit;
 }
 
 select {
@@ -461,13 +477,14 @@ select::msg-expand { display: none }
     display: block;
   }
 
-  #experience {
-    page-break-before: always;
-  }
-
   #skills {
+    page-break-before: always;
     position: relative;
     display: block;
+  }
+
+  #experience {
+    page-break-before: always;
   }
 
   .print-block {
